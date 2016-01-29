@@ -1,0 +1,18 @@
+ion-header-bar
+{
+    background-color: maroon !important;
+    color: white !important;
+}
+ion-header-bar .title
+{
+    color: white !important;
+}
+
+.msl-center-text { text-align: center;}
+
+
+*
+{
+    color: maroon !important;
+}
+

@@ -1,0 +1,26 @@
+<ion-view bar-positive view-title="This Week">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="refresh()"></ion-refresher>
+        <div ng-repeat="game in data.schedule" class="list card">
+            <div class="item item-icon-left">
+                <i class="icon {{game.ionic_icon_name}}"></i>
+                <h2>{{game.home_team}} vs. {{game.visiting_team}} (<span ng-switch="{{game.is_home_team}}"><span ng-switch-when="0">V</span><span ng-switch-default>H</span></span>)</h2>
+                <p>{{game.game_date_time}}</p>
+            </div>
+            <div class="item item-body">
+                <div class="row">
+                    <div class="col">Status</div>
+                    <div class="col">{{game.status_name}}</div>
+                </div>
+                <div class="row">
+                    <div class="col">Location</div>
+                    <div class="col">{{game.sport_location}}</div>
+                </div>
+                <div class="row">
+                    <div class="col">Field</div>
+                    <div class="col">{{game.field_name}}</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

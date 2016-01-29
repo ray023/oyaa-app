@@ -1,0 +1,12 @@
+<ion-view bar-positive view-title="Subscribe" >
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="refresh()"></ion-refresher>
+        <ion-list>
+            <ion-item class="item-remove-animate item-icon-right" ng-repeat="association_season in data.association_seasons" type="item-text-wrap" href="#/tab/subscribe/{{association_season.id}}" data-style="{{association_season.css_style}}">
+                <h2>{{association_season.association_name}}</h2>
+                <p><i class="icon-left {{association_season.ionic_icon_name}} "></i> {{association_season.season_name}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

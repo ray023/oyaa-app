@@ -1,0 +1,18 @@
+<ion-view bar-positive view-title="Schedule">
+    <ion-content class="padding">
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="refresh()"></ion-refresher>
+        <div ng-show="data.team_is_plural" ng-cloak>
+            <ion-list>
+                <ion-item class="item-remove-animate item-icon-right" ng-repeat="team in data.teams" type="item-text-wrap" href="#/tab/schedule/{{team.id}}" >
+                    <h2>{{team.team_description}}</h2>
+                    <p>{{team.head_coach}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+            </ion-list>
+        </div>
+        <!-- show schedule when only subscribed to one team-->
+        <div ng-show="!data.team_is_plural" ng-cloak>
+            <msl-team-schedule></msl-team-schedule>
+        </div>
+    </ion-content>
+</ion-view>

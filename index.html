@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>OYAA</title>
+        <link href="lib/css/ionic.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body ng-app="oyaaApp">
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+
+        <!-- js References -->
+        <script src="lib/js/ionic.bundle.js"></script>
+        <script src="cordova.js"></script>
+        <script src="app/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="app/news/mslNewsCtrl.js"></script>
+        <script src="app/schedule/mslScheduleCtrl.js"></script>
+        <script src="app/subscribe/mslSubscribeCtrl.js"></script>
+        <script src="app/settings/mslSettingsCtrl.js"></script>
+
+        <!-- Services -->
+        <script src="app/news/mslNewsSvc.js"></script>
+        <script src="app/schedule/mslScheduleSvc.js"></script>
+        <script src="app/subscribe/mslSubscribeSvc.js"></script>
+        <script src="app/settings/mslSettingsSvc.js"></script>
+
+        <!-- Directives -->
+		<script src="app/shared/mslSharedDirectives.js"></script>
+
+    </body>
+</html>
