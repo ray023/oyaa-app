@@ -16,3 +16,9 @@ ion-header-bar .title
     color: maroon !important;
 }
 
+html body ion-nav-bar div ion-header-bar button i,
+html body ion-nav-bar div ion-header-bar button span,
+.popup-buttons button
+{
+    color: white !important;
+}
